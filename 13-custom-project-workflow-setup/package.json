@@ -1,0 +1,49 @@
+{
+    "name": "ng-custom-workflow-setup",
+    "version": "1.0.0",
+    "description": "An Angular seed project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack-dev-server --inline --progress --port 8080 --config webpack.config.dev.js",
+        "build:prod": "del-cli dist && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'src/**/*.js' 'src/app/**/*.js' 'src/app/**/*.ngfactory.ts' 'src/app/**/*.js.map' 'src/app/**/*.shim.ts' 'src/app/**/*.ngsummary.json' 'src/app/**/*.ngstyle.ts' 'dist/app' 'src/polyfills.ngsummary.json'",
+        "serve": "lite-server"
+    },
+    "author": "Maninder Pal Singh",
+    "license": "ISC",
+    "dependencies": {
+        "@angular/animations": "^8.2.14",
+        "@angular/common": "^8.2.14",
+        "@angular/compiler": "^8.2.14",
+        "@angular/compiler-cli": "^8.2.14",
+        "@angular/core": "^8.2.14",
+        "@angular/forms": "^8.2.14",
+        "@angular/http": "^7.2.15",
+        "@angular/platform-browser": "^8.2.14",
+        "@angular/platform-browser-dynamic": "^8.2.14",
+        "@angular/platform-server": "^8.2.14",
+        "@angular/router": "^8.2.14",
+        "@angular/upgrade": "^8.2.14",
+        "core-js": "^3.6.0",
+        "rxjs": "^6.5.3",
+        "zone.js": "^0.10.2"
+    },
+    "devDependencies": {
+        "@ngtools/webpack": "^8.3.21",
+        "@types/core-js": "^2.5.2",
+        "@types/node": "^12.12.21",
+        "angular-router-loader": "^0.8.5",
+        "angular2-template-loader": "^0.6.2",
+        "awesome-typescript-loader": "^5.2.1",
+        "del-cli": "^3.0.0",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "lite-server": "^2.5.4",
+        "raw-loader": "^1.0.0",
+        "typescript": "~3.4.0",
+        "webpack": "^4.41.3",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.0",
+        "webpack-merge": "^4.2.2"
+    }
+}
